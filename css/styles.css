@@ -46,9 +46,12 @@ html {
 
 .logo {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 20px;
   color: var(--accent);
   padding: 10px;
+}
+.logo img{
+  width: 200px;
 }
 
 .nav-links {
@@ -61,6 +64,7 @@ html {
   color: var(--text);
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 20px;
 }
 
 .nav-links a:hover {
@@ -265,3 +269,18 @@ body.light-mode .logo {
   
 }
 
+body.light-mode .logo img{
+  background-image: url('css/Logol.phg'); 
+}
+
+.footer a {
+  color: #00d4ff;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #7cf7c2;
+}

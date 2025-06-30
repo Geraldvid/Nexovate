@@ -53,13 +53,17 @@ hamburger.addEventListener('click', () => {
 // Toggle Dark/Light Mode
 const toggleBtn = document.getElementById('toggle-theme');
 const root = document.documentElement;
+const body = document.body;
+const logo = document.getElementById("logo");
 
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
 
-  if (document.body.classList.contains('light-mode')) {
-    toggleBtn.textContent = '☀️';
-  } else {
-    toggleBtn.textContent = '🌙';
-  }
+  const isLight = document.body.classList.contains('light-mode');
+
+  toggleBtn.textContent = isLight ? '☀️' : '🌙';
+
+  // Cambiar logo según modo
+  const logoPath = isLight ? 'css/Logol.png' : 'css/Logon.png';
+  logo.setAttribute('src', logoPath);
 });
